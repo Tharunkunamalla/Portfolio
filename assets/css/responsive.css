@@ -11,7 +11,7 @@ body {
 .night-icon {
   position: absolute;
   top: 68vh;
-  width: 7%;
+  width: 10%;
   right: 1rem;
   opacity: 4;
   background-color: #081b29;
@@ -53,6 +53,15 @@ nav {
 
 .logo h2 {
   position: fixed;
+  top: 1.4rem;
+}
+.h2-logo {
+  left: 1rem;
+  position: absolute;
+}
+.toggleClass .h2-logo {
+  position: fixed;
+  left: 1rem;
   top: 1.4rem;
 }
 .navbar {
@@ -261,8 +270,8 @@ textarea {
 
 .msg-btn,
 .msg-btn1 {
+  margin-left: 1rem;
   padding: 0.5rem;
-  margin: auto;
   margin-bottom: 1rem;
 }
 
