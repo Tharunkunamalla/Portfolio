@@ -1,0 +1,294 @@
+.menu {
+  flex-direction: column;
+  margin-left: 40%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.night-icon {
+  position: absolute;
+  top: 68vh;
+  width: 7%;
+  right: 1rem;
+  opacity: 4;
+  background-color: #081b29;
+  border-radius: 30px 0 0 30px;
+}
+
+.toggleClass .night-icon {
+  background-color: #d9d7f1;
+}
+
+#main {
+  height: 100vh;
+}
+#about {
+  padding: 3rem 0rem;
+}
+.text2 {
+  align-items: center;
+}
+#about .container {
+  width: 100%;
+}
+nav {
+  width: 100%;
+}
+
+.menuHide {
+  display: none;
+}
+.showMenu {
+  display: block;
+  transition: 0.5 all ease-in-out;
+  color: white;
+}
+
+.logo h2 {
+  position: fixed;
+  top: 1.4rem;
+}
+.navbar {
+  height: 3rem;
+}
+
+.hamburgerNav {
+  height: 25rem;
+  background-color: #081b29;
+  color: white;
+  opacity: 0.92;
+}
+
+li a {
+  color: white;
+  transition: 0.5s all ease-in-out;
+}
+
+.menuContainer {
+  right: 2rem;
+  position: fixed;
+  top: 6rem;
+}
+.logo {
+  padding-left: 4rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  margin-right: 10rem;
+  margin-bottom: 22rem;
+}
+.toggleClass .logo {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+  margin-right: 10rem;
+}
+
+.hamburger {
+  display: block;
+  position: fixed;
+  top: 0rem;
+  width: 12%;
+  right: 1.6rem;
+}
+
+.skills_container {
+  grid-template-columns: repeat(1, auto);
+}
+
+.container {
+  flex-direction: column;
+  /* padding-top: 2rem; */
+  align-items: center;
+  justify-content: center;
+}
+.contactOptions {
+  flex-direction: column;
+}
+
+.projectContainer {
+  grid-template-columns: repeat(1, auto);
+  grid-gap: 0rem;
+}
+
+#about .container {
+  width: 100vw;
+}
+
+.skills_content {
+  margin: 1rem 0rem;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.text {
+  padding: 0rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 4rem;
+}
+
+h3 {
+  font-size: 16px;
+}
+p {
+  font-size: 12px;
+}
+
+.btn {
+  width: 50%;
+  padding: 0rem;
+}
+
+.social-icons {
+  position: absolute;
+  top: 12rem;
+  right: 73%;
+}
+
+.imageOfMe {
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+}
+
+.scroll-down {
+  margin-top: 2rem;
+  display: none;
+}
+
+#about .imageOfMe {
+  margin-left: 0rem;
+  padding-top: 2rem;
+  width: 60%;
+}
+
+.text p {
+  padding: 1rem;
+}
+
+.text2 {
+  padding: 0rem;
+  width: 100%;
+  margin-right: 0rem;
+}
+
+.text2 p {
+  padding: 1rem;
+  margin-top: 0rem;
+}
+
+.text2 h1 {
+  font-size: 25px;
+}
+
+.card {
+  align-items: center;
+}
+
+.card p {
+  padding: 0rem;
+  text-align: center;
+}
+
+.h-primary {
+  font-size: 22px;
+}
+.h-secondary {
+  font-size: 18px;
+}
+.media-img {
+  max-width: 18% !important;
+}
+
+#skills {
+  padding: 0rem;
+}
+#portfolio {
+  padding: 4rem 2rem;
+}
+
+.projectCard p {
+  margin-top: 0rem;
+}
+.projectCard {
+  margin: 1rem 0rem;
+}
+
+#contact {
+  padding: 4rem 0rem;
+}
+
+.contactContainer {
+  padding: 1rem 0rem;
+}
+
+.contactCard {
+  margin: 0.5rem 0rem;
+}
+
+.contactText p {
+  text-align: center;
+}
+
+.contactOptions {
+  padding: 0rem;
+}
+
+.input {
+  flex-direction: column;
+}
+input {
+  width: auto;
+}
+
+textarea {
+  width: 83%;
+  padding: 1rem;
+}
+
+.msg-btn {
+  padding: 0.5rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.aboutMe {
+  align-items: center;
+  display: none;
+}
+.social-footer {
+  justify-content: center;
+}
+
+.observeElement {
+  opacity: 0;
+  transition: all ease-out 1s;
+  filter: blur(5px);
+  transform: initial;
+  transform: translateX(-100%);
+  overflow-x: hidden;
+}
+
+.observeRight {
+  transform: initial;
+  transform: translateX(-100%);
+}
+
+.blur {
+  filter: blur(20px);
+}
+
+.showObserver {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
