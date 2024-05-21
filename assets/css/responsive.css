@@ -28,8 +28,12 @@ body {
 #about {
   padding: 3rem 0rem;
 }
-.text2 {
+.text2,
+.abt-cnt {
   align-items: center;
+}
+.abt-cnt {
+  text-align: center;
 }
 #about .container {
   width: 100%;
@@ -255,7 +259,8 @@ textarea {
   padding: 1rem;
 }
 
-.msg-btn {
+.msg-btn,
+.msg-btn1 {
   padding: 0.5rem;
   margin: auto;
   margin-bottom: 1rem;
