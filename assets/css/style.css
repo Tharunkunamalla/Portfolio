@@ -435,6 +435,116 @@ p {
   margin: 0rem;
 }
 
+.timeline {
+  position: relative;
+  width: 80%;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: black;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.timeline-item.left {
+  text-align: right;
+  margin-right: 55%;
+}
+
+.timeline-item.right {
+  margin-left: 55%;
+}
+
+.timeline-circle {
+  position: absolute;
+  width: 40px; /* Adjust size to fit your design */
+  height: 40px; /* Ensure it matches width for a circle */
+  background: white;
+  border: 2px solid black; /* Optional border for better visibility */
+  border-radius: 50%; /* Makes it a circle */
+  top: 20px; /* Aligns with the middle of the timeline */
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures image fits within the circle */
+  z-index: 1000;
+}
+.right-circle {
+  position: absolute;
+  width: 40px; /* Adjust size to fit your design */
+  height: 40px; /* Ensure it matches width for a circle */
+  background: white;
+  border: 2px solid black; /* Optional border for better visibility */
+  border-radius: 50%; /* Makes it a circle */
+  left: 50%;
+  top: 20px; /* Aligns with the middle of the timeline */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures image fits within the circle */
+  z-index: 1000;
+}
+
+.timeline-circle img {
+  width: 100%; /* Ensures the image fills the circle */
+  height: 100%;
+  object-fit: cover; /* Ensures the image doesn't distort */
+  border-radius: 50%; /* Ensures the image fits within the circle */
+}
+.timeline-triangle {
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item.left .timeline-triangle {
+  right: -20px;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+.timeline-item.right .timeline-triangle {
+  left: -20px;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent black;
+}
+
+.timeline-content {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0.6, 0.8);
+  position: relative;
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: 20px;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 20px;
+}
+
+.toggleClass .timeline-content {
+  background-color: var(--darkModeHoverBackgroundColor);
+}
+
 /* Skills Section starts here */
 
 #skills {
@@ -781,9 +891,9 @@ textarea {
 .project:nth-child(5) {
   transition-delay: 800ms;
 }
-.project:nth-child(6) {
+/* .project:nth-child(6) {
   transition-delay: 1000ms;
-}
+} */
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
@@ -865,5 +975,79 @@ h1:hover {
     );
     border-image-slice: 1;
     border-width: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 7%; /* Keep the line consistent */
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item.left {
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item.right {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .timeline-circle {
+    left: 7%; /* Keep the circle fixed to the timeline line */
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-content {
+    margin-left: 15%;
+    margin-right: 5%;
+    width: calc(100% - 20%);
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 10%;
+    margin-right: 2%;
+  }
+
+  .timeline-triangle {
+    display: none; /* Remove triangle for better alignment */
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 7%; /* Align the timeline line */
+  }
+
+  .timeline-circle {
+    left: 7%; /* Align the circles with the timeline line */
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-content {
+    margin-left: 20%;
+    margin-right: 10%;
+    width: calc(100% - 30%);
+  }
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 13%;
+    margin-right: 2%;
   }
 }
