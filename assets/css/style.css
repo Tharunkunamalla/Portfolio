@@ -8,7 +8,6 @@
 body {
   overflow-x: hidden;
 }
-
 :root {
   --primaryBackground: white;
   --primaryColor: black;
@@ -149,10 +148,10 @@ li:hover {
 }
 
 li a::after {
+  content: "";
   position: absolute;
   left: 0;
   top: 100%;
-  content: "";
   height: 2px;
   width: 0px;
   background-color: var(--underlineColor);
@@ -317,7 +316,7 @@ p {
   padding-top: 8rem;
 }
 .imageOfMe {
-  width: 75%;
+  width: 65%;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -328,6 +327,7 @@ p {
 
 .mySelf {
   display: flex;
+  filter: drop-shadow(0.75em 0.75em 1rem);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   animation: border-move 4s linear infinite;
   transition: transform 0.3s ease-in-out;
@@ -353,12 +353,6 @@ p {
   width: 35%;
   font-weight: 800;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.mySelf {
-  display: flex;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  animation: border-move 4s linear infinite;
 }
 
 .scroll-down {
@@ -558,6 +552,9 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(320px, auto));
   grid-gap: 2rem;
   padding: 2rem 0rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  image-resolution: initial;
 }
 
 .projectCard {
@@ -714,6 +711,7 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-right: 3rem;
 }
 
 .iconFooter {
